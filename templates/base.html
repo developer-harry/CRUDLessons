@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{% block title %}CRUD Lessons{% endblock %}</title>
+        <style>
+            body {
+                max-width: 850px;
+                margin: 40px auto;
+                padding: 0 16px;
+                color: #1f2937;
+                font-family: Arial, sans-serif;
+                background: #f3f4f6;
+            }
+            header, main {
+                padding: 24px;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 2px 8px #00000012;
+            }
+            header { margin-bottom: 20px; }
+            h1, h2 { margin-top: 0; }
+            a { color: #1d4ed8; }
+            .button, button {
+                display: inline-block;
+                padding: 9px 13px;
+                border: 0;
+                border-radius: 6px;
+                color: white;
+                background: #2563eb;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 14px;
+            }
+            .danger { background: #dc2626; }
+            .actions { display: flex; gap: 8px; align-items: center; }
+            .actions form { margin: 0; }
+            .task {
+                padding: 16px 0;
+                border-bottom: 1px solid #e5e7eb;
+            }
+            .task:last-child { border-bottom: 0; }
+            .task p { white-space: pre-wrap; }
+            label { display: block; margin: 16px 0 6px; font-weight: bold; }
+            input, textarea {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #cbd5e1;
+                border-radius: 6px;
+                font: inherit;
+            }
+            textarea { min-height: 120px; resize: vertical; }
+            .error { color: #b91c1c; }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1><a href="{{ url_for('index') }}">CRUD Lessons</a></h1>
+            <p>A small task app for practicing Create, Read, Update, and Delete.</p>
+        </header>
+        <main>{% block content %}{% endblock %}</main>
+    </body>
+</html>
