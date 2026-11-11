@@ -132,5 +132,9 @@ initialize_db()
 
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=5001, debug=True)
-# mnnlk;nlf+Anj
+    app.run(debug=True, port=5001)
+    
+    
+    
+    
+# min ga lar par
